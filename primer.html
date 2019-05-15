@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+            'use strict';
+
+            function primer(num) {
+
+                var prima = false;
+                var arr = [];
+                var i = 0;
+                for(var a = 2; a <= num; a++){ 
+                    
+                    prima = true;
+
+                    for(var b = 2; b <= a; b++){ 
+                        if(a % b == 0){
+                            if(a != b){
+                                prima = false;
+                            }
+                        } 
+                    }
+                    if(prima == true){
+                        arr[i] = a;
+                    }
+                i++;      
+                }
+                
+                var k = 0;
+                var karr = [];
+                arr.forEach(function(t){
+                    karr[k] = t;
+                k++;    
+                });
+                
+            return karr;       
+            }
+
+            let num = prompt("Enter Number", "");
+            alert(primer(num));
+            // primer(num);
+
+        </script>
+</body>
+
+</html>

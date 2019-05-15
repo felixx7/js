@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+   <script>
+        // function sayHi() {
+        //     alert("Hello");
+        // };
+
+        // let sayHi = function () {
+        //     alert("Hello");
+        // };
+
+        // let func = sayHi;    // (2) copy
+
+        // func(); // Hello     // (3) run the copy (it works)!
+        // sayHi(); // Hello    //     this still works too (why wouldn't it)
+
+        function pilihPresiden(jawaban,satu,dua){ //copy of kosongsatu and copy of kosongdua
+            if(jawaban == "02"){
+                satu(); //copy of kosongsatu
+            } else {
+                dua(); //copy of kosongdua
+            }
+        }
+
+        function kosongSatu(){
+            alert("Jokowi - Ma'ruf");
+        }
+
+        function kosongDua(){
+            alert("Prabowo - Sandi");
+        }
+
+        pilihPresiden("02",kosongSatu,kosongDua);
+    </script>
+</body>
+
+</html>

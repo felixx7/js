@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+            'use strict';
+
+            function polyndrum(word) {
+                var str = word;
+                var n = str.length;
+
+                if (n % 2 == 0) {
+                    console.log("bilangan genap");
+                    var n2 = Math.floor(n * 50 / 100);
+                    var k = str.slice(n2);
+                    var l = str.slice(0, -n2);
+
+                    console.log(l);
+                    console.log(k);
+
+                    var k_split = k.split("");
+                    console.log(k_split.reverse());
+                    var k_join = k_split.join("");
+                    console.log(k_join);
+
+                    if (k_join == l) {
+                        return "you are pool";
+                    } else {
+                        return "you are not pool";
+                    }
+
+                } else {
+                    console.log("bilangan ganjil");
+                    var n2 = Math.floor(n * 50 / 100);
+                    var l = str.slice(0, -n2 - 1);
+                    var k = str.slice(n2 + 1);
+
+                    console.log(l);
+                    console.log(k);
+
+                    var k_split = k.split("");
+                    console.log(k_split.reverse());
+                    var k_join = k_split.join("");
+                    console.log(k_join);
+
+                    if (k_join == l) {
+                        return "you are pool";
+                    } else {
+                        return "you are not pool";
+                    }
+
+                }
+
+            }
+
+            let name = prompt("Enter Word?", "");
+            alert(kebolak(name));
+
+        </script>
+</body>
+
+</html>

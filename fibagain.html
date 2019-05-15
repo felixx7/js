@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        function fib(inp) {
+            var before = 0;
+            var after = 1;
+
+            var res = [];
+
+            for (i = 0; i <= inp; i++) {
+
+                result = before + after;
+
+                res[i] = result;
+
+                before = after;
+                after = result;
+            }
+            
+            res.forEach(function (entry) {
+                console.log(entry);
+            });
+        }
+
+        fib(10);
+    </script>
+</body>
+
+</html>

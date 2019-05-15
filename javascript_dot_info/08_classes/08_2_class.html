@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<script>
+function User(name, birthday) {
+  // only visible from other methods inside User
+
+  function calcAge() {
+    return new Date().getFullYear() - birthday.getFullYear();
+  }
+
+  let apakek = function (){
+      return "apakek";
+  }
+
+  this.sayHi = function() {
+    alert(`${name}, age:${calcAge()}, apakek:${apakek()}`);
+  };
+}
+
+let user = new User("John", new Date(2000, 0, 1));
+user.sayHi(); // John, age:17
+</script>
